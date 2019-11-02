@@ -1,0 +1,62 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>To do list - Ilya Protsenko</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="header">
+        <p class="title">To do list</p>
+            <input type="text" id="search-form" placeholder="Search by title...">
+            <select id="select-priority-filter">
+                <option selected value="all">Priority</option>
+                <option value="high">High</option>
+                <option value="medium">Medium</option>
+                <option value="low">Low</option>
+            </select>
+            <select id="select-status-filter">
+                <option selected value="all">All</option>
+                <option value="open">Open</option>
+                <option value="done">Done</option>
+            </select>
+            <button type="button" id="btn-fill-task">Create</button>
+    </div>
+        
+
+    <div class="backdrop"></div>
+    <div class="modal">
+                <div class="modal-title"><p>Create your task</p></div><hr>
+                <form class = "all-inputs" name="add-task-form">
+                    <div class="modal-input-title">
+                        <p>Enter the title</p>
+                        <input type="text" id="input-title" placeholder="What you gonna do?" maxlength="32">
+                    </div>
+                    <div class="modal-input-description">
+                        <p>Enter a description:</p>
+                        <input type="text" id="input-description" placeholder="Describe the details" maxlength="96">
+                    </div>
+                    <div class="modal-input-priority">
+                        <p>Choose task priority:</p>
+                        <select name="priority" id="edit-priority">
+                            <option>High</option>
+                            <option>Medium</option>
+                            <option>Low</option>
+                        </select>
+                    </div>
+                    <div class="modal-input-buttons">
+                        <button type="submit" id="btn-add">Confirm</button>
+                        <button type="button" id="btn-cancel">Cancel</button></p>
+                    </div>
+                </form>
+    </div>
+
+    <div class="task-list"></div>
+
+    <div class="footer">Ilya Protsenko</div>
+
+    <script src=script.js></script>
+</body>
+
+</html>
